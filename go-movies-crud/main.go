@@ -29,6 +29,23 @@ func getMovies(w http.Response, r*http.Request) {
 	json.NewEncoder(w).Encode(movies)
 }
 
+func deleteMovie(w http.Response, r*http.Request) {
+	w.Header().set("Content-Type", "application/json")
+	params := 
+}
+
+func getMovie(w http.Response, r*http.Request) {
+
+}
+
+func createMovie(w http.Response, r*http.Request) {
+
+}
+
+func updateMovie(w http.Response, r*http.Request) {
+	
+}
+
 func main() {
 	r := mux.NewRouter()
 
