@@ -5,7 +5,7 @@ import (
 	"github.com/dgrijalva/jwt-go"
 )
 
-func authorize(role string, next http.HandlerFunc) http.HandlerFunc {
+func Authorize(role string, next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r*http.Request) {
 		tokenString := r.Header.Get("Authorization")
 		if tokenString == "" {

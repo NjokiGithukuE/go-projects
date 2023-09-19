@@ -14,7 +14,7 @@ var (
 	}
 )
 
-func generateJWT(user User) (string, error) {
+func GenerateJWT(user User) (string, error) {
 	claims := jwt.MapClaims{
 		"sub": user.Username, 
 		"iss": "your-app-name", 
@@ -32,7 +32,7 @@ func generateJWT(user User) (string, error) {
 	return jwtToken, nil
 }
 
-func authenticate(username, password string) (User, error) {
+func Authenticate(username, password string) (User, error) {
 	for _, user := range users {
 		if user.Username == username && user.Password == password {
 			return user, nil
